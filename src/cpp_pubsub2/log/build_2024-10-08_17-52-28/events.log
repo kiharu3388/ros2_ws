@@ -1,0 +1,166 @@
+[0.000000] (-) TimerEvent: {}
+[0.000387] (cpp_pubsub) JobQueued: {'identifier': 'cpp_pubsub', 'dependencies': OrderedDict()}
+[0.000470] (cpp_pubsub) JobStarted: {'identifier': 'cpp_pubsub'}
+[0.013524] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'cmake'}
+[0.014224] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '/root/ros2_ws/src/cpp_pubsub', '-DCMAKE_INSTALL_PREFIX=/root/ros2_ws/src/cpp_pubsub/install/cpp_pubsub'], 'cwd': '/root/ros2_ws/src/cpp_pubsub/build/cpp_pubsub', 'env': OrderedDict([('HOSTNAME', '0fb03b2bf9d2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root/ros2_ws/src/cpp_pubsub/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/ros2_ws/install/cpp_pubsub:/root/ros2_ws/install/my_package:/root/ros2_ws/install/launch_testing_examples:/root/ros2_ws/install/examples_rclpy_pointcloud_publisher:/root/ros2_ws/install/examples_rclpy_minimal_subscriber:/root/ros2_ws/install/examples_rclpy_minimal_service:/root/ros2_ws/install/examples_rclpy_minimal_publisher:/root/ros2_ws/install/examples_rclpy_minimal_client:/root/ros2_ws/install/examples_rclcpp_multithreaded_executor:/root/ros2_ws/install/examples_rclcpp_minimal_timer:/root/ros2_ws/install/examples_rclcpp_minimal_service:/root/ros2_ws/install/examples_rclcpp_minimal_publisher:/root/ros2_ws/install/examples_rclcpp_minimal_client:/root/ros2_ws/install/examples_rclcpp_minimal_action_server:/root/ros2_ws/install/examples_rclcpp_async_client:/root/ros2_ws/install/examples_rclpy_minimal_action_server:/root/ros2_ws/install/examples_rclpy_minimal_action_client:/root/ros2_ws/install/examples_rclpy_guard_conditions:/root/ros2_ws/install/examples_rclpy_executors:/opt/ros/humble'), ('PWD', '/root/ros2_ws/src/cpp_pubsub/build/cpp_pubsub'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/ros2_ws/install/launch_testing_examples/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_minimal_action_server:/root/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_minimal_action_client:/root/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_guard_conditions:/root/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_executors:/root/ros2_ws/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/ros2_ws/install/cpp_pubsub:/root/ros2_ws/install/my_package:/root/ros2_ws/install/examples_rclcpp_multithreaded_executor:/root/ros2_ws/install/examples_rclcpp_minimal_timer:/root/ros2_ws/install/examples_rclcpp_minimal_service:/root/ros2_ws/install/examples_rclcpp_minimal_publisher:/root/ros2_ws/install/examples_rclcpp_minimal_client:/root/ros2_ws/install/examples_rclcpp_minimal_action_server:/root/ros2_ws/install/examples_rclcpp_async_client:/root/ros2_ws/install/launch_testing_examples:/root/ros2_ws/install/examples_rclpy_pointcloud_publisher:/root/ros2_ws/install/examples_rclpy_minimal_subscriber:/root/ros2_ws/install/examples_rclpy_minimal_service:/root/ros2_ws/install/examples_rclpy_minimal_publisher:/root/ros2_ws/install/examples_rclpy_minimal_client:/root/ros2_ws/install/examples_rclpy_minimal_action_server:/root/ros2_ws/install/examples_rclpy_minimal_action_client:/root/ros2_ws/install/examples_rclpy_guard_conditions:/root/ros2_ws/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[0.080898] (cpp_pubsub) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099943] (-) TimerEvent: {}
+[0.140451] (cpp_pubsub) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.148476] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.200772] (-) TimerEvent: {}
+[0.216468] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.223854] (cpp_pubsub) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.224194] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.224600] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.227199] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.301776] (-) TimerEvent: {}
+[0.304184] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.310854] (cpp_pubsub) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.311120] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.311544] (cpp_pubsub) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.315128] (cpp_pubsub) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.402711] (-) TimerEvent: {}
+[0.457677] (cpp_pubsub) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.503935] (-) TimerEvent: {}
+[0.554676] (cpp_pubsub) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.601600] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.604755] (-) TimerEvent: {}
+[0.609279] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.618757] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.631886] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.650418] (cpp_pubsub) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.701579] (cpp_pubsub) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.705494] (cpp_pubsub) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.705581] (-) TimerEvent: {}
+[0.787296] (cpp_pubsub) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.806810] (-) TimerEvent: {}
+[0.811197] (cpp_pubsub) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.847785] (cpp_pubsub) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.859520] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.907697] (-) TimerEvent: {}
+[0.924994] (cpp_pubsub) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.925514] (cpp_pubsub) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.997380] (cpp_pubsub) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.998441] (cpp_pubsub) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.008695] (-) TimerEvent: {}
+[1.109876] (-) TimerEvent: {}
+[1.117404] (cpp_pubsub) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.127478] (cpp_pubsub) StdoutLine: {'line': b'-- Generating done\n'}
+[1.130115] (cpp_pubsub) StdoutLine: {'line': b'-- Build files have been written to: /root/ros2_ws/src/cpp_pubsub/build/cpp_pubsub\n'}
+[1.136401] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[1.138111] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'build'}
+[1.138175] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/ros2_ws/src/cpp_pubsub/build/cpp_pubsub', '--', '-j16', '-l16'], 'cwd': '/root/ros2_ws/src/cpp_pubsub/build/cpp_pubsub', 'env': OrderedDict([('HOSTNAME', '0fb03b2bf9d2'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/root/ros2_ws/src/cpp_pubsub/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/root/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/root/ros2_ws/install/cpp_pubsub:/root/ros2_ws/install/my_package:/root/ros2_ws/install/launch_testing_examples:/root/ros2_ws/install/examples_rclpy_pointcloud_publisher:/root/ros2_ws/install/examples_rclpy_minimal_subscriber:/root/ros2_ws/install/examples_rclpy_minimal_service:/root/ros2_ws/install/examples_rclpy_minimal_publisher:/root/ros2_ws/install/examples_rclpy_minimal_client:/root/ros2_ws/install/examples_rclcpp_multithreaded_executor:/root/ros2_ws/install/examples_rclcpp_minimal_timer:/root/ros2_ws/install/examples_rclcpp_minimal_service:/root/ros2_ws/install/examples_rclcpp_minimal_publisher:/root/ros2_ws/install/examples_rclcpp_minimal_client:/root/ros2_ws/install/examples_rclcpp_minimal_action_server:/root/ros2_ws/install/examples_rclcpp_async_client:/root/ros2_ws/install/examples_rclpy_minimal_action_server:/root/ros2_ws/install/examples_rclpy_minimal_action_client:/root/ros2_ws/install/examples_rclpy_guard_conditions:/root/ros2_ws/install/examples_rclpy_executors:/opt/ros/humble'), ('PWD', '/root/ros2_ws/src/cpp_pubsub/build/cpp_pubsub'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/root/ros2_ws/install/launch_testing_examples/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.10/site-packages:/root/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_minimal_action_server:/root/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_minimal_action_client:/root/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_guard_conditions:/root/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:/root/ros2_ws/build/examples_rclpy_executors:/root/ros2_ws/install/examples_rclpy_executors/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/ros2_ws/install/cpp_pubsub:/root/ros2_ws/install/my_package:/root/ros2_ws/install/examples_rclcpp_multithreaded_executor:/root/ros2_ws/install/examples_rclcpp_minimal_timer:/root/ros2_ws/install/examples_rclcpp_minimal_service:/root/ros2_ws/install/examples_rclcpp_minimal_publisher:/root/ros2_ws/install/examples_rclcpp_minimal_client:/root/ros2_ws/install/examples_rclcpp_minimal_action_server:/root/ros2_ws/install/examples_rclcpp_async_client:/root/ros2_ws/install/launch_testing_examples:/root/ros2_ws/install/examples_rclpy_pointcloud_publisher:/root/ros2_ws/install/examples_rclpy_minimal_subscriber:/root/ros2_ws/install/examples_rclpy_minimal_service:/root/ros2_ws/install/examples_rclpy_minimal_publisher:/root/ros2_ws/install/examples_rclpy_minimal_client:/root/ros2_ws/install/examples_rclpy_minimal_action_server:/root/ros2_ws/install/examples_rclpy_minimal_action_client:/root/ros2_ws/install/examples_rclpy_guard_conditions:/root/ros2_ws/install/examples_rclpy_executors:/opt/ros/humble')]), 'shell': False}
+[1.189435] (cpp_pubsub) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o\x1b[0m\n'}
+[1.189613] (cpp_pubsub) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[1.210878] (-) TimerEvent: {}
+[1.311908] (-) TimerEvent: {}
+[1.412844] (-) TimerEvent: {}
+[1.513803] (-) TimerEvent: {}
+[1.614748] (-) TimerEvent: {}
+[1.715852] (-) TimerEvent: {}
+[1.816777] (-) TimerEvent: {}
+[1.917851] (-) TimerEvent: {}
+[2.018851] (-) TimerEvent: {}
+[2.119773] (-) TimerEvent: {}
+[2.220880] (-) TimerEvent: {}
+[2.321861] (-) TimerEvent: {}
+[2.422862] (-) TimerEvent: {}
+[2.523861] (-) TimerEvent: {}
+[2.624812] (-) TimerEvent: {}
+[2.725833] (-) TimerEvent: {}
+[2.826817] (-) TimerEvent: {}
+[2.927892] (-) TimerEvent: {}
+[3.028723] (-) TimerEvent: {}
+[3.129767] (-) TimerEvent: {}
+[3.230859] (-) TimerEvent: {}
+[3.318156] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMinimalPublisher::MinimalPublisher()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.318358] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:40:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[KMinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[Kcount_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.318427] (cpp_pubsub) StderrLine: {'line': b'   40 |   : Node("minimal_publisher"), \x1b[01;31m\x1b[Kcount_\x1b[m\x1b[K(0)\n'}
+[3.318486] (cpp_pubsub) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.324292] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:42:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.324427] (cpp_pubsub) StderrLine: {'line': b'   42 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K = this->create_publisher<std_msgs::msg::String>("topic", 10);\n'}
+[3.324494] (cpp_pubsub) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.324552] (cpp_pubsub) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[3.331807] (-) TimerEvent: {}
+[3.332852] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:43:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktimer_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.333000] (cpp_pubsub) StderrLine: {'line': b'   43 |     \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K = this->create_wall_timer(\n'}
+[3.333067] (cpp_pubsub) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.333126] (cpp_pubsub) StderrLine: {'line': b'      |     \x1b[32m\x1b[Ktimer_t\x1b[m\x1b[K\n'}
+[3.346099] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MinimalPublisher::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.346265] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:51:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcount_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.346333] (cpp_pubsub) StderrLine: {'line': b'   51 |     message.data = "Hello, world! " + std::to_string(\x1b[01;31m\x1b[Kcount_\x1b[m\x1b[K++);\n'}
+[3.346391] (cpp_pubsub) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.351976] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:53:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.352098] (cpp_pubsub) StderrLine: {'line': b'   53 |     \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(message);\n'}
+[3.352163] (cpp_pubsub) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.352234] (cpp_pubsub) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[3.352597] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K At global scope:\n'}
+[3.352773] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:59:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected initializer before \xe2\x80\x98\x1b[01m\x1b[Ktimer_\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.352854] (cpp_pubsub) StderrLine: {'line': b'   59 |   rclcpp::TimerBase::SharedPtr \x1b[01;31m\x1b[Ktimer_\x1b[m\x1b[K;\n'}
+[3.352916] (cpp_pubsub) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.354402] (cpp_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/root/ros2_ws/src/cpp_pubsub/src/publisher_member_function.cpp:62:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[3.354512] (cpp_pubsub) StderrLine: {'line': b'   62 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[3.354575] (cpp_pubsub) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.432862] (-) TimerEvent: {}
+[3.533810] (-) TimerEvent: {}
+[3.634842] (-) TimerEvent: {}
+[3.735837] (-) TimerEvent: {}
+[3.836802] (-) TimerEvent: {}
+[3.937844] (-) TimerEvent: {}
+[3.999077] (cpp_pubsub) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/talker.dir/build.make:76: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1\n'}
+[3.999480] (cpp_pubsub) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/talker.dir/all] Error 2\n'}
+[3.999586] (cpp_pubsub) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[4.038835] (-) TimerEvent: {}
+[4.139903] (-) TimerEvent: {}
+[4.240898] (-) TimerEvent: {}
+[4.341843] (-) TimerEvent: {}
+[4.442910] (-) TimerEvent: {}
+[4.543738] (-) TimerEvent: {}
+[4.644819] (-) TimerEvent: {}
+[4.745906] (-) TimerEvent: {}
+[4.846885] (-) TimerEvent: {}
+[4.947903] (-) TimerEvent: {}
+[5.048814] (-) TimerEvent: {}
+[5.149872] (-) TimerEvent: {}
+[5.250998] (-) TimerEvent: {}
+[5.351898] (-) TimerEvent: {}
+[5.452918] (-) TimerEvent: {}
+[5.553773] (-) TimerEvent: {}
+[5.654839] (-) TimerEvent: {}
+[5.755905] (-) TimerEvent: {}
+[5.856855] (-) TimerEvent: {}
+[5.957877] (-) TimerEvent: {}
+[6.059048] (-) TimerEvent: {}
+[6.160017] (-) TimerEvent: {}
+[6.260952] (-) TimerEvent: {}
+[6.361944] (-) TimerEvent: {}
+[6.462892] (-) TimerEvent: {}
+[6.563960] (-) TimerEvent: {}
+[6.664988] (-) TimerEvent: {}
+[6.765837] (-) TimerEvent: {}
+[6.866901] (-) TimerEvent: {}
+[6.967718] (-) TimerEvent: {}
+[7.068903] (-) TimerEvent: {}
+[7.169949] (-) TimerEvent: {}
+[7.270990] (-) TimerEvent: {}
+[7.372016] (-) TimerEvent: {}
+[7.472976] (-) TimerEvent: {}
+[7.573833] (-) TimerEvent: {}
+[7.674908] (-) TimerEvent: {}
+[7.775873] (-) TimerEvent: {}
+[7.876874] (-) TimerEvent: {}
+[7.977826] (-) TimerEvent: {}
+[8.078943] (-) TimerEvent: {}
+[8.179861] (-) TimerEvent: {}
+[8.280937] (-) TimerEvent: {}
+[8.381945] (-) TimerEvent: {}
+[8.477807] (cpp_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable listener\x1b[0m\n'}
+[8.482876] (-) TimerEvent: {}
+[8.583879] (-) TimerEvent: {}
+[8.684849] (-) TimerEvent: {}
+[8.781562] (cpp_pubsub) StdoutLine: {'line': b'[ 75%] Built target listener\n'}
+[8.782733] (cpp_pubsub) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.784454] (cpp_pubsub) CommandEnded: {'returncode': 2}
+[8.784968] (-) TimerEvent: {}
+[8.827708] (cpp_pubsub) JobEnded: {'identifier': 'cpp_pubsub', 'rc': 2}
+[8.839436] (-) EventReactorShutdown: {}
