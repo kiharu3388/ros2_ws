@@ -26,11 +26,13 @@ private:
     std::string received_message = msg.data;
     count_ = std::stoi(received_message.substr(received_message.find_last_of(' ') + 1));
 
-    new_message_->data = "Response to: " + msg.data;
-    publisher_->publish(*new_message_);
-
-    if (count_ >= 100) {
-      exit(0);
+    if (count_ == 100) {
+      printf("Received 100 messages\n");
+      // exit(0);
+      count_ = 0;
+    } else {
+      new_message_->data = msg.data;
+      publisher_->publish(*new_message_);
     }
   }
 
