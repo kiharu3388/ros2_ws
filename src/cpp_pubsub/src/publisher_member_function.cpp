@@ -23,17 +23,19 @@ public:
   MinimalPublisher()
   : Node("minimal_publisher"), count_(0), message_(std::make_shared<std_msgs::msg::String>())
   {
-    csv_file_path_ = "/root/ros2_ws/measurement_results.csv";
+    csv_file_path_ = "/root/ros2_ws/measurement_results2.csv";
 
     this->declare_parameter<int>("message_size", 256);
     this->get_parameter("message_size", message_size_);
 
-    rclcpp::QoS qos(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default));
-    qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+    rclcpp::QoS qos_settings(rclcpp::KeepLast(10));
+    qos_settings.durability(rclcpp::DurabilityPolicy::TransientLocal);
+    qos_settings.history(rclcpp::HistoryPolicy::KeepAll);
+    qos_settings.reliability(rclcpp::ReliabilityPolicy::Reliable);
 
-    publisher_ = this->create_publisher<std_msgs::msg::String>("ping", 10);
+    publisher_ = this->create_publisher<std_msgs::msg::String>("ping", qos_settings);
     subscription_ = this->create_subscription<std_msgs::msg::String>(
-      "pong", 10, std::bind(&MinimalPublisher::topic_callback, this, std::placeholders::_1));
+      "pong", qos_settings, std::bind(&MinimalPublisher::topic_callback, this, std::placeholders::_1));
 
     GET_TIME(start_time_, "Failed to get publish time");
     publish_message();
@@ -41,7 +43,7 @@ public:
 
 private:
   void publish_message() {
-    message_->data = std::string(message_size_, 'x') + " " + std::to_string(count_);
+    message_->data = std::string(message_size_, 'x');
     publisher_->publish(*message_);
   }
 
@@ -64,7 +66,8 @@ private:
       } else {
         RCLCPP_ERROR(this->get_logger(), "Failed to open CSV file for writing.");
       }
-      exit(0);
+      // exit(0);
+      rclcpp::shutdown();
     } else {
       count_++;
       publish_message();
@@ -84,7 +87,7 @@ int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<MinimalPublisher>());
-  rclcpp::shutdown();
+  // rclcpp::shutdown();
   return 0;
 }
 

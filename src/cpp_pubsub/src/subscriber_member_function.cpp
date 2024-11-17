@@ -12,23 +12,25 @@ public:
   MinimalSubscriber()
   : Node("minimal_subscriber"), count_(0), new_message_(std::make_shared<std_msgs::msg::String>())
   {
-    rclcpp::QoS qos(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_default));
-    qos.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+    rclcpp::QoS qos_settings(rclcpp::KeepLast(10));
+    qos_settings.durability(rclcpp::DurabilityPolicy::TransientLocal);
+    qos_settings.history(rclcpp::HistoryPolicy::KeepAll);
+    qos_settings.reliability(rclcpp::ReliabilityPolicy::Reliable);
 
     subscription_ = this->create_subscription<std_msgs::msg::String>(
-      "ping", 10, std::bind(&MinimalSubscriber::topic_callback, this, _1));
-    publisher_ = this->create_publisher<std_msgs::msg::String>("pong", 10);
+      "ping", qos_settings, std::bind(&MinimalSubscriber::topic_callback, this, _1));
+    publisher_ = this->create_publisher<std_msgs::msg::String>("pong", qos_settings);
   }
 
 private:
   void topic_callback(const std_msgs::msg::String & msg)
   {
     std::string received_message = msg.data;
-    count_ = std::stoi(received_message.substr(received_message.find_last_of(' ') + 1));
+    count_++;
 
     if (count_ == 100) {
+      publisher_->publish(*new_message_);
       printf("Received 100 messages\n");
-      // exit(0);
       count_ = 0;
     } else {
       new_message_->data = msg.data;
