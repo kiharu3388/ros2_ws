@@ -10,7 +10,7 @@ class MinimalSubscriber : public rclcpp::Node
 {
 public:
   MinimalSubscriber()
-  : Node("minimal_subscriber"), count_(0), new_message_(std::make_shared<std_msgs::msg::String>())
+  : Node("minimal_subscriber"), count_(0)
   {
     rclcpp::QoS qos_settings(rclcpp::KeepLast(10));
     qos_settings.durability(rclcpp::DurabilityPolicy::TransientLocal);
@@ -20,12 +20,21 @@ public:
     subscription_ = this->create_subscription<std_msgs::msg::String>(
       "ping", qos_settings, std::bind(&MinimalSubscriber::topic_callback, this, _1));
     publisher_ = this->create_publisher<std_msgs::msg::String>("pong", qos_settings);
+
+    // 初期メッセージを作成
+    new_message_ = std::make_shared<std_msgs::msg::String>();
+  }
+
+  ~MinimalSubscriber()
+  {
+    // メモリ解放
+    new_message_.reset();
   }
 
 private:
   void topic_callback(const std_msgs::msg::String & msg)
   {
-    std::string received_message = msg.data;
+    new_message_->data = msg.data;
     count_++;
 
     if (count_ == 100) {
@@ -33,7 +42,6 @@ private:
       printf("Received 100 messages\n");
       count_ = 0;
     } else {
-      new_message_->data = msg.data;
       publisher_->publish(*new_message_);
     }
   }

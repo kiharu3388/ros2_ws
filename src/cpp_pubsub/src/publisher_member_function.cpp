@@ -21,7 +21,7 @@ class MinimalPublisher : public rclcpp::Node
 {
 public:
   MinimalPublisher()
-  : Node("minimal_publisher"), count_(0), message_(std::make_shared<std_msgs::msg::String>())
+  : Node("minimal_publisher"), count_(0), prelude_done_(false)
   {
     csv_file_path_ = "/root/ros2_ws/measurement_results2.csv";
 
@@ -37,19 +37,39 @@ public:
     subscription_ = this->create_subscription<std_msgs::msg::String>(
       "pong", qos_settings, std::bind(&MinimalPublisher::topic_callback, this, std::placeholders::_1));
 
-    GET_TIME(start_time_, "Failed to get publish time");
+    // 初期メッセージを作成
+    message_ = std::make_shared<std_msgs::msg::String>();
+    message_->data = std::string(message_size_, 'x');
+
+    // 最初の1回目の送信
     publish_message();
+  }
+
+  ~MinimalPublisher()
+  {
+    // メモリ解放
+    message_.reset();
   }
 
 private:
   void publish_message() {
-    message_->data = std::string(message_size_, 'x');
+    printf("publish\n");
     publisher_->publish(*message_);
   }
 
   void topic_callback(const std_msgs::msg::String &)
   {
-    if(count_ == 99) { 
+    printf("subscribe\n");
+    if (!prelude_done_) {
+      // 1往復完了後に計測開始
+      GET_TIME(start_time_, "Failed to get publish time");
+      prelude_done_ = true;
+      RCLCPP_INFO(this->get_logger(), "Measurement started.");
+      publish_message();
+      return;
+    }
+
+    if (count_ == 99) {
       GET_TIME(end_time_, "Failed to get subscribe time");
       double elapsed_time = ((double)end_time_.tv_sec + (double)end_time_.tv_nsec / (double)1000000000l)
                              - ((double)start_time_.tv_sec + (double)start_time_.tv_nsec / (double)1000000000l);
@@ -66,7 +86,6 @@ private:
       } else {
         RCLCPP_ERROR(this->get_logger(), "Failed to open CSV file for writing.");
       }
-      // exit(0);
       rclcpp::shutdown();
     } else {
       count_++;
@@ -77,6 +96,7 @@ private:
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
   rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
   size_t count_;
+  bool prelude_done_; // 計測前の1往復が完了したか
   int message_size_;
   std::shared_ptr<std_msgs::msg::String> message_;
   struct timespec start_time_, end_time_;
